@@ -12,6 +12,8 @@ you need package.json - manifest file that stores important info about the proje
 *npm init will do things step by step and allow you to configure the package.json file
 *npm init -y will set up package.json with default settings
 
+finally, for a new project, if you do not have node_modules but package.json exists, simply run "npm install"
+
 ===================
 Example using lodash below.
 make sure to use "npm i lodash" before running
