@@ -1,0 +1,24 @@
+visit the npm website, this is like gems in ruby
+
+//installed locally for the current project
+npm i <packagename>
+
+//installed globally. Useable in every project
+npm install -g <packagename>
+
+
+you need package.json - manifest file that stores important info about the project/package
+*you can manually create package.json in the root, but you must create and configure properties yourself
+*npm init will do things step by step and allow you to configure the package.json file
+*npm init -y will set up package.json with default settings
+
+===================
+Example using lodash below.
+make sure to use "npm i lodash" before running
+===================
+const _ = require("lodash");
+
+const items = [1,[2,[3,[4]]]];
+const newItems = _.flattenDeep(items);
+
+console.log(newItems);
