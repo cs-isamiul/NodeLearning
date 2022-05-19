@@ -7,10 +7,16 @@ npm i <packagename>
 npm install -g <packagename>
 
 
-you need package.json - manifest file that stores important info about the project/package
+//you need package.json - manifest file that stores important info about the project/package
 *you can manually create package.json in the root, but you must create and configure properties yourself
-*npm init will do things step by step and allow you to configure the package.json file
-*npm init -y will set up package.json with default settings
+*"npm init" will do things step by step and allow you to configure the package.json file
+*"npm init -y" will set up package.json with default settings
+
+//install package as a dev dependency for use during development
+npm i <packagename> -D
+
+//uninstall a package
+npm uninstall <packagename>
 
 finally, for a new project, if you do not have node_modules but package.json exists, simply run "npm install"
 
