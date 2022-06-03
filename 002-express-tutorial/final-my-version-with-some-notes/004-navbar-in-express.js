@@ -6,10 +6,11 @@ const path = require('path');
 //static because the path does not change, from here express sets up mime types and pathing
 app.use(express.static("./public"));
 
-app.get("/", (req,res)=>{
-    //you need to send the absolute path
-    res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"));
-});
+// you can do this, or you can put all these resources into the public file and have them be static
+// app.get("/", (req,res)=>{
+//     //you need to send the absolute path
+//     res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"));
+// });
 
 app.all("*",(req,res)=>{
     res.status(404).send("Resource not found");
