@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 const tasksRoute = require("./routes/tasks");
 const connectDB = require("./db/connect");
 //access database .env file
@@ -20,6 +21,7 @@ const start = async () => {
 }
 
 //middleware
+app.use(express.static("./public"));
 app.use(express.json());
 //routes
 app.use("/api/v1/tasks", tasksRoute);
